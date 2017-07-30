@@ -24,21 +24,6 @@ namespace NancyAPI
                         string sql = "SELECT * FROM GAME_STORIES ";
                         string sqlAnswers = "SELECT * FROM GAME_STORIES_ANSWERS ";
 
-                        //using (SQLiteCommand cmd = new SQLiteCommand(sql, conn))
-                        //{
-                        //using (SQLiteDataReader reader = cmd.ExecuteReader())
-                        //{
-                        //    while (reader.Read())
-                        //    {
-                        //        Language la = new Language();
-                        //        la.LangTitle = reader["LangTitle"].ToString();
-                        //        la.Id = Int32.Parse(reader["Id"].ToString());
-                        //        langs.Add(la);
-                        //    }
-                        //}
-                        //}
-
-
                         SQLiteDataAdapter da = new SQLiteDataAdapter(sql, conn);
                         da.Fill(ds, "GAME_STORIES");
 
